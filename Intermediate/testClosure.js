@@ -1,6 +1,7 @@
 function teste() {
+    const num = 5;
     return function () {
-        return 5;
+        return num;
     }
 }
 
