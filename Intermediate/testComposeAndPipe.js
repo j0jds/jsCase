@@ -4,6 +4,7 @@ const somar2 = (num) => num + 2;
 const subtrair1 = (num) => num - 1;
 
 // Pipe
+// O pipe tem uma ordem de funcionamento que leva em consideração a leitura das funções da esquerda para a direita, high order function para callback.
 const processador = (...fns) => {
     return (valor) => {
         return fns.reduce((acc, fn) => {
@@ -12,7 +13,9 @@ const processador = (...fns) => {
     }
 }
 
+
 // Compose
+// O compose, nesse caso, funciona de maneira inversa ao pipe. Aqui as funções são executadas da direita para a esquerda.
 // const processador = (...fns) => {
 //     return (valor) => {
 //         return fns.reduceRight((acc, fn) => {
