@@ -13,7 +13,6 @@ const processador = (...fns) => {
     }
 }
 
-
 // Compose
 // O compose, nesse caso, funciona de maneira inversa ao pipe. Aqui as funções são executadas da direita para a esquerda.
 // const processador = (...fns) => {
