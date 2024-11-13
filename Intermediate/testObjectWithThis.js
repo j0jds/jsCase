@@ -19,3 +19,26 @@ pessoa2.falar = pessoa.falar;
 
 pessoa.falar();
 pessoa2.falar();
+
+// --------------------------------------------------------------------------------------------------------------------------------- //
+
+// Uma forma de melhor estruturar é alocando a função numa constante separada.
+const falar = function() {
+        console.log(`Olá, eu me chamo ${this.nome} e tenho ${this.idade} anos.`);
+}
+
+const pessoa3 = {
+    nome: 'EpilefEpilefEpilef',
+    idade: '002',
+}
+
+const pessoa4 = {
+    nome: 'Lari',
+    idade: '001'
+}
+
+pessoa3.falar = falar;
+pessoa4.falar = falar;
+
+pessoa3.falar();
+pessoa4.falar();
