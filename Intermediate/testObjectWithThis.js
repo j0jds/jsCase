@@ -33,7 +33,7 @@ const pessoa3 = {
 }
 
 const pessoa4 = {
-    nome: 'Lari',
+    nome: 'Mari',
     idade: '001'
 }
 
