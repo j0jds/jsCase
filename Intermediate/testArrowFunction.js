@@ -1,4 +1,4 @@
-// função comum
+// Função comum
 
 const dobro = function (x) {
     return x * 2;
@@ -9,7 +9,7 @@ console.log("------------------------- DIVISÃO -------------------------")
 
 // ----------------------------------------------------------- //
 
-// arrow function
+// Arrow function
 
 const dobro2 = x => x * 2;
 console.log(dobro2(5));
