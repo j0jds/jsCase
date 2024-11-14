@@ -8,30 +8,48 @@
 
 
 // 1
-const pessoa = {
-    nome: 'Epilef',
-    falar() {
-        console.log(this.nome);
-    },
-}
+// const pessoa = {
+//     nome: 'Epilef',
+//     falar() {
+//         console.log(this.nome);
+//     },
+// }
 
-pessoa.falar();
+// pessoa.falar();
 
 // 2
-const carro = function(modelo) {
-    this.modelo = modelo;
-    this.acelerar = function() {
-        console.log(this.modelo)
-    };
+// const carro = function(modelo) {
+//     this.modelo = modelo;
+//     this.acelerar = function() {
+//         console.log(this.modelo)
+//     };
+// };
+
+// const c = new carro ('BMW');
+// c.acelerar();
+
+// // 3
+// "use strict"
+// function logar() {
+//     console.log(window);
+// }
+
+// logar();
+
+// 4
+const falar = function() {
+    console.log(this, this.nome);
 };
 
-const c = new carro ('BMW');
-c.acelerar();
+const obj = {
+    nome: 'Epilef',
+    falar() {
+        console.log('this 1', this);   
+        setTimeout(function() {  
+            console.log('this 2', this )
+        }.bind(this), 1000);
+    }
+};
 
-// 3
-"use strict"
-function logar() {
-    console.log(this);
-}
-
-logar();
+// falar.call(obj);
+obj.falar();
