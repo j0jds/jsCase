@@ -44,9 +44,11 @@ const falar = function() {
 const obj = {
     nome: 'Epilef',
     falar() {
+        // Nesse exemplo posso ver que ao usar uma function regular, o meu this vai apontar para o objeto que está chamando essa função.
         console.log('this 1', this);   
         setTimeout(function() {  
             console.log('this 2', this )
+            // E aqui, por estar em uma função que foi chamada via bind, ela aponta para o primeiro parâmetro dessa função.
         }.bind(this), 1000);
     }
 };
