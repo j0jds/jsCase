@@ -1,3 +1,12 @@
+// class Pessoa {
+//     constructor(nome, idade) {
+//         this.nome = nome
+//         this.idade = idade
+//     }
+// }
+
+// -------------------------------------------------- //
+
 const Pessoa = function (nome, idade) {
     this.nome = nome;
     this.idade = idade;
@@ -22,7 +31,19 @@ Array.prototype.Epilef = function () {
 
 Array.prototype.teste = 'Teste';
 
-console.log(Array.prototype);
-console.log([1, 2, 3].__proto__);
-console.log([1, 2, 3].Epilef());
-console.log([1, 2, 3].teste);
+// console.log(Array.prototype);
+// console.log([1, 2, 3].__proto__);
+// console.log([1, 2, 3].Epilef());
+// console.log([1, 2, 3].teste);
+
+if(Array.prototype.filterArray == 'function') {
+    // Implementação externa "filterArray"
+
+    Array.prototype.filterArray = function() {
+        console.log(this);
+    }
+
+    console.log([1, 2, 3, 4, 5].filterArray());
+
+
+}
