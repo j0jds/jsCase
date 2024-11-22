@@ -36,14 +36,19 @@ Array.prototype.teste = 'Teste';
 // console.log([1, 2, 3].Epilef());
 // console.log([1, 2, 3].teste);
 
-if(Array.prototype.filterArray == 'function') {
+if (typeof Array.prototype.filterArray !== 'function') {
     // Implementação externa "filterArray"
-
     Array.prototype.filterArray = function() {
         console.log(this);
     }
-
-    console.log([1, 2, 3, 4, 5].filterArray());
-
-
 }
+
+console.log([1, 2, 3, 4, 5].filterArray());
+
+Array.prototype.at = function() {
+    console.log('alterado');
+}
+
+console.log(Array.prototype);
+
+console.log([1, 2, 3].at());
